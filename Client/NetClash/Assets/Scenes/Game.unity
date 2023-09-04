@@ -1821,7 +1821,7 @@ MonoBehaviour:
   <isEnemy>k__BackingField: 1
   parameters: {fileID: 1573035499}
   _defaultStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
-  _chaseStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
+  _chaseStateSO: {fileID: 11400000, guid: 0a543a1d535eb6849bc7428ebc2c694f, type: 2}
   _attackStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
 --- !u!195 &1573035501
 NavMeshAgent:
@@ -1853,7 +1853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573035498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9, y: 0, z: 10.1}
+  m_LocalPosition: {x: -3.93, y: 0, z: 15.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2324,7 +2324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135569195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.35, y: 0, z: -6.87}
+  m_LocalPosition: {x: 3.4, y: 0, z: -14.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2365,5 +2365,5 @@ MonoBehaviour:
   <isEnemy>k__BackingField: 0
   parameters: {fileID: 2135569198}
   _defaultStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
-  _chaseStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
+  _chaseStateSO: {fileID: 11400000, guid: 0a543a1d535eb6849bc7428ebc2c694f, type: 2}
   _attackStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
