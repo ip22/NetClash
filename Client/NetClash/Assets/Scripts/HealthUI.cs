@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(LookAtCamera))] 
 public class HealthUI : MonoBehaviour
 {
     [SerializeField] private RectTransform _filledImage;

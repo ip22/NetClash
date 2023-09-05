@@ -5,10 +5,10 @@ using UnityEngine.AI;
 [CreateAssetMenu(fileName = "_NavMeshChase", menuName = "UnitState/NavMeshChase")]
 public class NavMeshChase : UnitState
 {
-    private bool _targetIsEnemy;
-    private float _startAttackDistance = 0;
-    private NavMeshAgent _agent;
     private Unit _targetUnit;
+    private bool _targetIsEnemy;
+    private NavMeshAgent _agent;
+    private float _startAttackDistance = 0;
 
     public override void Constuctor(Unit unit) {
         base.Constuctor(unit);
@@ -45,8 +45,14 @@ public class NavMeshChase : UnitState
     public override void DebugDrawGizmos(Unit unit) {
         Handles.color = Color.red;
         Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.startChaseDistance);
+        
         Handles.color = Color.yellow;
         Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.stopChaseDistance);
+
+        Handles.color = Color.red;
+        Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.startAttackDistance);
+        Handles.color = Color.red;
+        Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.stopAttackDistance);
     }
 #endif
 }

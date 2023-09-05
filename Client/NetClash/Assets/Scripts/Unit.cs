@@ -18,9 +18,6 @@ public class Unit : MonoBehaviour, IHealth
     private UnitState _currentState;
 
     private void Start() {
-        Debug.Log("unit start");
-        health.UpdateHP();
-
         _defaultState = Instantiate(_defaultStateSO);
         _defaultState.Constuctor(this);
 

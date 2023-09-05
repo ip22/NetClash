@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     private void Start() {
         Debug.Log("health start");
         _current = _max;
+        UpdateHP();
     }
 
     public void SetMax(int max) {
@@ -25,8 +26,9 @@ public class Health : MonoBehaviour
     public void ApplyDamage(float value) {
         _current -= value;
         if (_current < 0) _current = 0;
+        UpdateHP();
 
-        Debug.Log($"Object {name}: last - {_current + value}, new {_current}");
+        Debug.Log($"{name}: {_current + value} - {value} = {_current}");
     }
 
     public void UpdateHP() => _ui.UpdateHealth(_max, _current);

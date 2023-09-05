@@ -10,4 +10,8 @@ public class LookAtCamera : MonoBehaviour
     private void Start() => _camera = Camera.main.transform;
 
     private void Update() => _transform.LookAt(_camera);
+
+    private void LateUpdate() {
+        transform.rotation = _camera.transform.rotation;
+    }
 }
