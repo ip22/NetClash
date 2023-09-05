@@ -12,7 +12,7 @@ public class UnitParameters : MonoBehaviour
     public float startAttackDistance { get { return modelRadius + _startAttackDistance; } }
     [SerializeField] private float _startAttackDistance;
 
-    public float stopAttackDistance { get { return modelRadius + stopAttackDistance; } }
+    public float stopAttackDistance { get { return modelRadius + _stopAttackDistance; } }
     [SerializeField] private float _stopAttackDistance;
 
 }
