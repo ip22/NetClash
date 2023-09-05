@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249175875}
   - component: {fileID: 249175876}
+  - component: {fileID: 249175877}
   m_Layer: 0
   m_Name: Tower L 1
   m_TagString: Untagged
@@ -274,7 +275,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f33a47195f0954599c478beeb6f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 2
+  <health>k__BackingField: {fileID: 249175877}
+  <radius>k__BackingField: 2
+--- !u!114 &249175877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249175874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90956ee7458fa9949b4bb550070f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_max>k__BackingField: 10
 --- !u!1 &276475038
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 276475039}
   - component: {fileID: 276475040}
+  - component: {fileID: 276475041}
   m_Layer: 0
   m_Name: Tower R 1
   m_TagString: Untagged
@@ -320,7 +336,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f33a47195f0954599c478beeb6f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 2
+  <health>k__BackingField: {fileID: 276475041}
+  <radius>k__BackingField: 2
+--- !u!114 &276475041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276475038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90956ee7458fa9949b4bb550070f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_max>k__BackingField: 10
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 447090254}
   - component: {fileID: 447090255}
+  - component: {fileID: 447090256}
   m_Layer: 0
   m_Name: Tower L 2
   m_TagString: Untagged
@@ -726,7 +757,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f33a47195f0954599c478beeb6f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 2
+  <health>k__BackingField: {fileID: 447090256}
+  <radius>k__BackingField: 2
+--- !u!114 &447090256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447090253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90956ee7458fa9949b4bb550070f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_max>k__BackingField: 10
 --- !u!1 &558089410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1124582011}
   - component: {fileID: 1124582012}
+  - component: {fileID: 1124582013}
   m_Layer: 0
   m_Name: King 2
   m_TagString: Untagged
@@ -1329,7 +1375,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f33a47195f0954599c478beeb6f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 3
+  <health>k__BackingField: {fileID: 1124582013}
+  <radius>k__BackingField: 2
+--- !u!114 &1124582013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124582010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90956ee7458fa9949b4bb550070f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_max>k__BackingField: 10
 --- !u!1 &1144320990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1209660848}
   - component: {fileID: 1209660849}
+  - component: {fileID: 1209660850}
   m_Layer: 0
   m_Name: Tower R 2
   m_TagString: Untagged
@@ -1480,7 +1541,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f33a47195f0954599c478beeb6f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 2
+  <health>k__BackingField: {fileID: 1209660850}
+  <radius>k__BackingField: 2
+--- !u!114 &1209660850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209660847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90956ee7458fa9949b4bb550070f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_max>k__BackingField: 10
 --- !u!1 &1372627982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372627983}
   - component: {fileID: 1372627984}
+  - component: {fileID: 1372627985}
   m_Layer: 0
   m_Name: King 1
   m_TagString: Untagged
@@ -1526,7 +1602,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f33a47195f0954599c478beeb6f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 1.5
+  <health>k__BackingField: {fileID: 1372627985}
+  <radius>k__BackingField: 2
+--- !u!114 &1372627985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372627982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90956ee7458fa9949b4bb550070f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_max>k__BackingField: 10
 --- !u!1 &1393620389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,6 +1871,7 @@ GameObject:
   - component: {fileID: 1573035501}
   - component: {fileID: 1573035500}
   - component: {fileID: 1573035499}
+  - component: {fileID: 1573035503}
   m_Layer: 0
   m_Name: Warrior (1)
   m_TagString: Untagged
@@ -1818,11 +1909,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4737ffe68be17ca4cbdb86488413415e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <health>k__BackingField: {fileID: 1573035503}
   <isEnemy>k__BackingField: 1
   parameters: {fileID: 1573035499}
   _defaultStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
   _chaseStateSO: {fileID: 11400000, guid: 0a543a1d535eb6849bc7428ebc2c694f, type: 2}
   _attackStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
+  _debug: 0
 --- !u!195 &1573035501
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1861,6 +1954,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1573035503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573035498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90956ee7458fa9949b4bb550070f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_max>k__BackingField: 10
 --- !u!1 &1691117588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,6 +2393,7 @@ GameObject:
   - component: {fileID: 2135569196}
   - component: {fileID: 2135569199}
   - component: {fileID: 2135569198}
+  - component: {fileID: 2135569200}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Untagged
@@ -2362,8 +2469,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4737ffe68be17ca4cbdb86488413415e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <health>k__BackingField: {fileID: 2135569200}
   <isEnemy>k__BackingField: 0
   parameters: {fileID: 2135569198}
   _defaultStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
   _chaseStateSO: {fileID: 11400000, guid: 0a543a1d535eb6849bc7428ebc2c694f, type: 2}
   _attackStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
+  _debug: 0
+--- !u!114 &2135569200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135569195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90956ee7458fa9949b4bb550070f991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_max>k__BackingField: 10
