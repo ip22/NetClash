@@ -154,7 +154,7 @@ MonoBehaviour:
   _defaultStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
   _chaseStateSO: {fileID: 11400000, guid: 0a543a1d535eb6849bc7428ebc2c694f, type: 2}
   _attackStateSO: {fileID: 11400000, guid: 73f0a8430bc21874abb6703d488ca7b1, type: 2}
-  _debug: 1
+  _debug: 0
 --- !u!114 &3869940587765528901
 MonoBehaviour:
   m_ObjectHideFlags: 0

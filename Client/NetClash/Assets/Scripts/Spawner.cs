@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] public Unit _warriorPrefab;
-    [SerializeField] public Material _warriorSkin;
+    [SerializeField] public Unit _unitPrefab;
+    [SerializeField] public Material _skin;
     [field: SerializeField] public bool isEnemy { get; private set; } = false;
     [SerializeField] private float _delay = 2f;
 
@@ -19,5 +19,5 @@ public class Spawner : MonoBehaviour
     }
 
     public void CreateWarrior(bool enemy) =>
-        Instantiate(_warriorPrefab, transform.position, Quaternion.identity).Init(enemy, _warriorSkin);
+        Instantiate(_unitPrefab, transform.position, Quaternion.identity).Init(enemy, _skin);
 }

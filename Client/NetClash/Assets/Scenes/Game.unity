@@ -1148,9 +1148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dfa44bb89ec3940b41938fccdffc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _warriorPrefab: {fileID: 3925953475215557585, guid: 9e1ba901d6af34540b73aef4f3a66872,
+  _unitPrefab: {fileID: 3925953475215557585, guid: 9e1ba901d6af34540b73aef4f3a66872,
     type: 3}
-  _warriorSkin: {fileID: 2100000, guid: 37919490f1938c347964caa428e5bea3, type: 2}
+  _skin: {fileID: 2100000, guid: 37919490f1938c347964caa428e5bea3, type: 2}
   <isEnemy>k__BackingField: 1
   _delay: 2.4
 --- !u!4 &386850212
@@ -1380,11 +1380,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dfa44bb89ec3940b41938fccdffc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _warriorPrefab: {fileID: 3925953475215557585, guid: 47c0b456beb93be4cbdeb9ff49f636e7,
+  _unitPrefab: {fileID: 3925953475215557585, guid: 47c0b456beb93be4cbdeb9ff49f636e7,
     type: 3}
-  _warriorSkin: {fileID: 2100000, guid: 6164f19c039ec484eaee9f94546fd536, type: 2}
+  _skin: {fileID: 2100000, guid: 6164f19c039ec484eaee9f94546fd536, type: 2}
   <isEnemy>k__BackingField: 1
-  _delay: 1
+  _delay: 1.6
 --- !u!4 &518518946
 Transform:
   m_ObjectHideFlags: 0
@@ -2003,11 +2003,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dfa44bb89ec3940b41938fccdffc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _warriorPrefab: {fileID: 3925953475215557585, guid: 47c0b456beb93be4cbdeb9ff49f636e7,
+  _unitPrefab: {fileID: 3925953475215557585, guid: 47c0b456beb93be4cbdeb9ff49f636e7,
     type: 3}
-  _warriorSkin: {fileID: 2100000, guid: bc00bfe38eac61740be0b6e30776863b, type: 2}
+  _skin: {fileID: 2100000, guid: bc00bfe38eac61740be0b6e30776863b, type: 2}
   <isEnemy>k__BackingField: 0
-  _delay: 1
+  _delay: 1.6
 --- !u!4 &813677939
 Transform:
   m_ObjectHideFlags: 0
@@ -2178,11 +2178,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dfa44bb89ec3940b41938fccdffc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _warriorPrefab: {fileID: 3925953475215557585, guid: 47c0b456beb93be4cbdeb9ff49f636e7,
+  _unitPrefab: {fileID: 3925953475215557585, guid: 47c0b456beb93be4cbdeb9ff49f636e7,
     type: 3}
-  _warriorSkin: {fileID: 2100000, guid: 6164f19c039ec484eaee9f94546fd536, type: 2}
+  _skin: {fileID: 2100000, guid: 6164f19c039ec484eaee9f94546fd536, type: 2}
   <isEnemy>k__BackingField: 1
-  _delay: 2
+  _delay: 1.6
 --- !u!4 &947094625
 Transform:
   m_ObjectHideFlags: 0
@@ -3167,11 +3167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dfa44bb89ec3940b41938fccdffc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _warriorPrefab: {fileID: 3925953475215557585, guid: 47c0b456beb93be4cbdeb9ff49f636e7,
+  _unitPrefab: {fileID: 3925953475215557585, guid: 47c0b456beb93be4cbdeb9ff49f636e7,
     type: 3}
-  _warriorSkin: {fileID: 2100000, guid: bc00bfe38eac61740be0b6e30776863b, type: 2}
+  _skin: {fileID: 2100000, guid: bc00bfe38eac61740be0b6e30776863b, type: 2}
   <isEnemy>k__BackingField: 0
-  _delay: 2
+  _delay: 1.6
 --- !u!4 &1328823366
 Transform:
   m_ObjectHideFlags: 0
@@ -3386,9 +3386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dfa44bb89ec3940b41938fccdffc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _warriorPrefab: {fileID: 3925953475215557585, guid: 9e1ba901d6af34540b73aef4f3a66872,
+  _unitPrefab: {fileID: 3925953475215557585, guid: 9e1ba901d6af34540b73aef4f3a66872,
     type: 3}
-  _warriorSkin: {fileID: 2100000, guid: d6c0f305f510c7042a1bf1c77a0b6464, type: 2}
+  _skin: {fileID: 2100000, guid: d6c0f305f510c7042a1bf1c77a0b6464, type: 2}
   <isEnemy>k__BackingField: 0
   _delay: 2.4
 --- !u!4 &1410416708
