@@ -41,11 +41,12 @@ public class NavMeshChase : UnitState
         _agent.SetDestination(_unit.transform.position);
     }
 
+    #region debug
 #if UNITY_EDITOR
     public override void DebugDrawGizmos(Unit unit) {
         Handles.color = Color.red;
         Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.startChaseDistance);
-        
+
         Handles.color = Color.yellow;
         Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.stopChaseDistance);
 
@@ -55,4 +56,5 @@ public class NavMeshChase : UnitState
         Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.stopAttackDistance);
     }
 #endif
+    #endregion
 }

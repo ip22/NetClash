@@ -6,7 +6,10 @@ public class Unit : MonoBehaviour, IHealth
     [field: SerializeField] public Health health { get; private set; }
 
     [field: SerializeField] public bool isEnemy { get; private set; } = false;
+
     [field: SerializeField] public UnitParameters parameters;
+
+    [SerializeField] private Renderer _renderer;
 
     [SerializeField] private UnitState _defaultStateSO;
     [SerializeField] private UnitState _chaseStateSO;
@@ -31,10 +34,13 @@ public class Unit : MonoBehaviour, IHealth
         _currentState.Init();
     }
 
-    private void Update() {
-        _currentState.Run();
+    public void Init(bool enemy, Material skin) {
+        isEnemy = enemy;
+        MapInfo.Instance.AddUnit(this, enemy);
+        _renderer.material = skin;
     }
 
+    private void Update() => _currentState.Run();
 
     public void SetState(UnitStateType type) {
         _currentState.Finish();
@@ -57,6 +63,14 @@ public class Unit : MonoBehaviour, IHealth
         _currentState.Init();
     }
 
+    private void OnDisable() {
+        MapInfo.Instance.RemoveUnit(this, isEnemy);
+        if (this == null) return;
+        Destroy(this.gameObject);
+    }
+
+
+    #region debug
 #if UNITY_EDITOR
     [Space(20)]
     [SerializeField] private bool _debug = false;
@@ -65,4 +79,5 @@ public class Unit : MonoBehaviour, IHealth
         if (_chaseStateSO != null) _chaseStateSO.DebugDrawGizmos(this);
     }
 #endif
+    #endregion
 }

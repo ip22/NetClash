@@ -19,11 +19,11 @@ public class MapInfo : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] private List<Tower> _playerTowers = new List<Tower>();
     [SerializeField] private List<Tower> _enemyTowers = new List<Tower>();
-
-    [SerializeField] private List<Unit> _playerUnits = new List<Unit>();
     [SerializeField] private List<Unit> _enemyUnits = new List<Unit>();
+
+    [SerializeField] private List<Tower> _playerTowers = new List<Tower>();
+    [SerializeField] private List<Unit> _playerUnits = new List<Unit>();
 
     public bool TryGetNearestUnit(in Vector3 currentPosition, bool enemy, out Unit unit, out float distance) {
         List<Unit> units = enemy ? _enemyUnits : _playerUnits;
@@ -54,5 +54,25 @@ public class MapInfo : MonoBehaviour
         }
 
         return nearest;
+    }
+
+    public void AddUnit(Unit unit, bool enemy) {
+        List<Unit> units = enemy ? _enemyUnits : _playerUnits;
+        units.Add(unit);
+    }
+
+    public void RemoveUnit(Unit unit, bool enemy) {
+        List<Unit> units = enemy ? _enemyUnits : _playerUnits;
+        units.Remove(unit);
+    }
+
+    public void AddTower(Tower tower, bool enemy) {
+        List<Tower> towers = enemy ? _enemyTowers : _playerTowers;
+        towers.Add(tower);
+    }
+
+    public void RemoveTower(Tower tower, bool enemy) {
+        List<Tower> towers = enemy ? _enemyTowers : _playerTowers;
+        towers.Remove(tower);
     }
 }

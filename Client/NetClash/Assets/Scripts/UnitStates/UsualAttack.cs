@@ -41,6 +41,7 @@ public class UsualAttack : UnitState
 
         float distanceToTarget = Vector3.Distance(_target.transform.position, _unit.transform.position);
         if (distanceToTarget > _stopAttackDistance) _unit.SetState(UnitStateType.Chase);
+        if (_target.isDead) _unit.SetState(UnitStateType.Default);
         _target.ApplyDamage(_damage);
     }
 
