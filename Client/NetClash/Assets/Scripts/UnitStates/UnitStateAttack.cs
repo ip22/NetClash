@@ -1,16 +1,16 @@
+using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "_UsualAttack", menuName = "UnitState/UsualAttack")]
-public class UsualAttack : UnitState
+public abstract class UnitStateAttack : UnitState
 {
     [SerializeField] private float _damage = 1.6f;
     [SerializeField] private float _delay = .6f;
 
-    private bool _targetIsEnemy;
+    protected bool _targetIsEnemy;
     private float _stopAttackDistance = 0;
     private float _time = 0f;
 
-    private Health _target;
+    protected Health _target;
 
     public override void Constuctor(Unit unit) {
         base.Constuctor(unit);
@@ -28,7 +28,6 @@ public class UsualAttack : UnitState
         _unit.transform.LookAt(_target.transform.position);
     }
 
-
     public override void Run() {
         _time += Time.deltaTime;
         if (_time < _delay) return;
@@ -45,31 +44,23 @@ public class UsualAttack : UnitState
         _target.ApplyDamage(_damage);
     }
 
-
     public override void Finish() {
 
     }
 
-    private bool TryFindTarget(out float stopAttackDistance) {
-        Vector3 unitPosition = _unit.transform.position;
+    protected abstract bool TryFindTarget(out float stopAttackDistance);
 
-        bool hasEnemy = MapInfo.Instance.TryGetNearestUnit(unitPosition, _targetIsEnemy, out Unit enemy, out float distance);
-        if (hasEnemy && distance - enemy.parameters.modelRadius <= _unit.parameters.startAttackDistance) {
-            _target = enemy.health;
 
-            stopAttackDistance = _unit.parameters.stopAttackDistance + enemy.parameters.modelRadius;
-            return true;
-        }
-
-        Tower targetTower = MapInfo.Instance.GetNearestTower(unitPosition, _targetIsEnemy);
-        if (targetTower.GetDistance(unitPosition) <= _unit.parameters.startAttackDistance) {
-            _target = targetTower.health;
-
-            stopAttackDistance = _unit.parameters.stopAttackDistance + targetTower.radius;
-            return true;
-        }
-
-        stopAttackDistance = 0;
-        return false;
+#if UNITY_EDITOR
+    public override void DebugDrawGizmos(Unit unit) {
+        Handles.color = Color.yellow;
+        Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.startChaseDistance);
+        Handles.color = Color.red;
+        Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.stopChaseDistance);
+        Handles.color = Color.yellow;
+        Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.startAttackDistance);
+        Handles.color = Color.red;
+        Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.stopAttackDistance);
     }
+#endif
 }

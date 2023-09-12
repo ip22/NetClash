@@ -24,20 +24,55 @@ public class MapInfo : MonoBehaviour
     [SerializeField] private List<Tower> _playerTowers = new List<Tower>();
 
     // units
-    [SerializeField] private List<Unit> _enemyUnits = new List<Unit>();
-    [SerializeField] private List<Unit> _playerUnits = new List<Unit>();
+    // ground
+    [SerializeField] private List<Unit> _enemyGroundUnits = new List<Unit>();
+    [SerializeField] private List<Unit> _playerGroundUnits = new List<Unit>();
+    // air
+    [SerializeField] private List<Unit> _enemyAirUnits = new List<Unit>();
+    [SerializeField] private List<Unit> _playerAirUnits = new List<Unit>();
 
     private void Start() {
         SubscribeDestroy(_enemyTowers);
         SubscribeDestroy(_playerTowers);
 
-        SubscribeDestroy(_enemyUnits);
-        SubscribeDestroy(_playerUnits);
+        SubscribeDestroy(_enemyGroundUnits);
+        SubscribeDestroy(_playerGroundUnits);
+
+        SubscribeDestroy(_enemyAirUnits);
+        SubscribeDestroy(_playerAirUnits);
     }
 
+    public void AddUnit(Unit unit) {
+        List<Unit> list;
+        if (unit.isEnemy) list = unit.parameters.isAir ? _enemyAirUnits : _enemyGroundUnits;
+        else list = unit.parameters.isAir ? _playerAirUnits : _playerGroundUnits;
 
-    public bool TryGetNearestUnit(in Vector3 currentPosition, bool enemy, out Unit unit, out float distance) {
-        List<Unit> units = enemy ? _enemyUnits : _playerUnits;
+       AddObjectToList(list, unit);
+    }
+
+    public bool TryGetNearestAnyUnit(in Vector3 currentPosition, bool enemy, out Unit unit, out float distance) {
+        TryGetNearestGroundUnit(currentPosition, enemy, out Unit groundUnit, out float groundDistance);
+        TryGetNearestAirUnit(currentPosition, enemy, out Unit airUnit, out float airDistance);
+
+        if (airDistance < groundDistance) {
+            unit = airUnit;
+            distance = airDistance;
+        } else {
+            unit = groundUnit;
+            distance = groundDistance;
+        }
+
+        return unit;
+    }
+
+    public bool TryGetNearestGroundUnit(in Vector3 currentPosition, bool enemy, out Unit unit, out float distance) {
+        List<Unit> units = enemy ? _enemyGroundUnits : _playerGroundUnits;
+        unit = GetNearest(currentPosition, units, out distance);
+        return unit;
+    }
+
+    public bool TryGetNearestAirUnit(in Vector3 currentPosition, bool enemy, out Unit unit, out float distance) {
+        List<Unit> units = enemy ? _enemyAirUnits : _playerAirUnits;
         unit = GetNearest(currentPosition, units, out distance);
         return unit;
     }
@@ -91,7 +126,7 @@ public class MapInfo : MonoBehaviour
         obj.Destroyed += RemoveAndUnsubscribe;
     }
 
-    private void RemoveObjectFromList<T>(List<T> list, T obj){
-        if (list.Contains(obj)) list.Remove(obj);       
+    private void RemoveObjectFromList<T>(List<T> list, T obj) {
+        if (list.Contains(obj)) list.Remove(obj);
     }
 }

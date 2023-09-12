@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 5415391904933926344}
   - component: {fileID: 6685853941130644091}
   m_Layer: 0
-  m_Name: Warrior
+  m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -347,9 +347,9 @@ MonoBehaviour:
   <health>k__BackingField: {fileID: 5415391904933926344}
   <isEnemy>k__BackingField: 0
   parameters: {fileID: 1640810214504178391}
-  _defaultStateSO: {fileID: 11400000, guid: b7a52e4aa27eb4146b4ebfe9fce52ccb, type: 2}
-  _chaseStateSO: {fileID: 11400000, guid: c4f010c19cf34bf47a6c8da79650903d, type: 2}
-  _attackStateSO: {fileID: 11400000, guid: 69f605fb1a91b124b813bccbb6263ec7, type: 2}
+  _defaultStateSO: {fileID: 11400000, guid: 8e7c3eb38d4794a49b91cc27d08cfba9, type: 2}
+  _chaseStateSO: {fileID: 11400000, guid: 0a543a1d535eb6849bc7428ebc2c694f, type: 2}
+  _attackStateSO: {fileID: 11400000, guid: 73f0a8430bc21874abb6703d488ca7b1, type: 2}
   _debug: 0
 --- !u!114 &1640810214504178391
 MonoBehaviour:
@@ -366,10 +366,10 @@ MonoBehaviour:
   <isAir>k__BackingField: 0
   <speed>k__BackingField: 6
   <modelRadius>k__BackingField: 0.5
-  <startChaseDistance>k__BackingField: 3
-  <stopChaseDistance>k__BackingField: 6
-  _startAttackDistance: 0.2
-  _stopAttackDistance: 0.3
+  <startChaseDistance>k__BackingField: 6
+  <stopChaseDistance>k__BackingField: 8
+  _startAttackDistance: 4
+  _stopAttackDistance: 5
 --- !u!114 &5415391904933926344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +460,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6c0f305f510c7042a1bf1c77a0b6464, type: 2}
+  - {fileID: 2100000, guid: c7ac9f19c1ddf6641aaf3279046e38b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

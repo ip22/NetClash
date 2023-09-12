@@ -41,10 +41,7 @@ public class Unit : MonoBehaviour, IHealth, IDestroyed
 
     }
 
-    private void Update() {
-        _currentState.Run();
-    }
-
+    private void Update() => _currentState.Run();
 
     public void SetState(UnitStateType type) {
         _currentState.Finish();

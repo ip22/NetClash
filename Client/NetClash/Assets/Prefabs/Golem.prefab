@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 5415391904933926344}
   - component: {fileID: 6685853941130644091}
   m_Layer: 0
-  m_Name: Warrior
+  m_Name: Golem
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -301,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6510559977912350780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4, y: 0, z: -14.18}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -318,17 +318,17 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6510559977912350780}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_AgentTypeID: -1372625422
+  m_Radius: 1.1
+  m_Speed: 3
+  m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 100
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
+  m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -347,10 +347,10 @@ MonoBehaviour:
   <health>k__BackingField: {fileID: 5415391904933926344}
   <isEnemy>k__BackingField: 0
   parameters: {fileID: 1640810214504178391}
-  _defaultStateSO: {fileID: 11400000, guid: b7a52e4aa27eb4146b4ebfe9fce52ccb, type: 2}
-  _chaseStateSO: {fileID: 11400000, guid: c4f010c19cf34bf47a6c8da79650903d, type: 2}
-  _attackStateSO: {fileID: 11400000, guid: 69f605fb1a91b124b813bccbb6263ec7, type: 2}
-  _debug: 0
+  _defaultStateSO: {fileID: 11400000, guid: 2887df70fc1502f428a1910b0cf3c049, type: 2}
+  _chaseStateSO: {fileID: 11400000, guid: 5abde74b89d19554285915ad1d59e383, type: 2}
+  _attackStateSO: {fileID: 11400000, guid: e7802e7bb64c3b547893b639f7ae1d6c, type: 2}
+  _debug: 1
 --- !u!114 &1640810214504178391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,10 +366,10 @@ MonoBehaviour:
   <isAir>k__BackingField: 0
   <speed>k__BackingField: 6
   <modelRadius>k__BackingField: 0.5
-  <startChaseDistance>k__BackingField: 3
-  <stopChaseDistance>k__BackingField: 6
-  _startAttackDistance: 0.2
-  _stopAttackDistance: 0.3
+  <startChaseDistance>k__BackingField: 0
+  <stopChaseDistance>k__BackingField: 0
+  _startAttackDistance: 0.8
+  _stopAttackDistance: 1.2
 --- !u!114 &5415391904933926344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ Transform:
   m_GameObject: {fileID: 8101644839970580795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7622786803450011624}
@@ -460,7 +460,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6c0f305f510c7042a1bf1c77a0b6464, type: 2}
+  - {fileID: 2100000, guid: 2c384286c934bb84ea64601e78dba0a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
