@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public event Action<float> HealthUpdate;
+    public event Action<float> UpdateHealth;
 
     [field: SerializeField] public float max { get; private set; } = 10f;
     private float _current;
@@ -15,7 +15,8 @@ public class Health : MonoBehaviour
     public void ApplyDamage(float value) {
         _current -= value;
         if (_current < 0) _current = 0;
-        HealthUpdate?.Invoke(_current);
+
+        UpdateHealth?.Invoke(_current);
 
         Debug.Log($"Object {name}: last - {_current + value}, new {_current}");
     }

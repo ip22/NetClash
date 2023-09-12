@@ -12,11 +12,11 @@ public class TowerUI : MonoBehaviour
         _healthBar.SetActive(true);
         _maxHealth = _tower.health.max;
 
-        _tower.health.HealthUpdate += UpdateHealth;
+        _tower.health.UpdateHealth += UpdateHealth;
     }
 
     private void OnDestroy() {
-        _tower.health.HealthUpdate -= UpdateHealth;
+        _tower.health.UpdateHealth -= UpdateHealth;
     }
 
     private void UpdateHealth(float currentValue) {

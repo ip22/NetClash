@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 5701776201236292623}
   - component: {fileID: 2989533244880136437}
   - component: {fileID: 5318989279551765393}
+  - component: {fileID: 8913279693834874298}
   m_Layer: 0
-  m_Name: Tower L 2
+  m_Name: Tower Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4867048787448029700
 Transform:
@@ -78,6 +79,22 @@ MonoBehaviour:
   _tower: {fileID: 5701776201236292623}
   _healthBar: {fileID: 8175386244598308953}
   _filledImage: {fileID: 1498157995709346955}
+--- !u!208 &8913279693834874298
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3507445231345118846}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 1, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7465559027660043851
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +112,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2916461129968756803
 Transform:

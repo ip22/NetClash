@@ -12,11 +12,11 @@ public class UnitUI : MonoBehaviour
         _healthBar.SetActive(true);
         _maxHealth = _unit.health.max;
 
-        _unit.health.HealthUpdate += UpdateHealth;
+        _unit.health.UpdateHealth += UpdateHealth;
     }
 
     private void OnDestroy() {
-        _unit.health.HealthUpdate -= UpdateHealth;
+        _unit.health.UpdateHealth -= UpdateHealth;
     }
 
     private void UpdateHealth(float currentValue) {
