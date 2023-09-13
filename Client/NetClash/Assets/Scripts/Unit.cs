@@ -56,6 +56,9 @@ public class Unit : MonoBehaviour, IHealth, IDestroyed
             case UnitStateType.Attack:
                 _currentState = _attackState;
                 break;
+            //case UnitStateType.None:
+            //    _chaseState = _defaultState;
+            //    break;
             default:
                 Debug.LogError("Can't handle state " + type);
                 break;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2e5e9a41f66b046bc6eb24f29627db, type: 3}
   m_Name: Golem_UsualTowerAttack
   m_EditorClassIdentifier: 
-  _damage: 1.6
-  _delay: 0.6
+  _damage: 3
+  _delay: 0.9

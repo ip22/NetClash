@@ -29,8 +29,6 @@ public abstract class UnitStateNavMeshChase : UnitState
         _startAttackDistance = _unit.parameters.startAttackDistance + _targetUnit.parameters.modelRadius;
     }
 
-    protected abstract void FindTargetUnit(out Unit targetUnit);
-
     public override void Run() {
         if (_targetUnit == null) {
             _unit.SetState(UnitStateType.Default);
@@ -60,4 +58,6 @@ public abstract class UnitStateNavMeshChase : UnitState
         Handles.DrawWireDisc(unit.transform.position, Vector3.up, unit.parameters.stopAttackDistance);
     }
 #endif
+
+    protected abstract void FindTargetUnit(out Unit targetUnit);
 }
