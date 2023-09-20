@@ -3,9 +3,9 @@ using UnityEngine;
 
 public abstract class UnitStateAttack : UnitState
 {
-    [SerializeField] private float _damage = 1.6f;
-    [SerializeField] private float _delay = .6f;
+    [field: SerializeField] protected float _damage { get; private set; } = 1.6f;
 
+    private float _delay = .6f;
     protected bool _targetIsEnemy;
     private float _stopAttackDistance = 0;
     private float _time = 0f;
@@ -14,8 +14,8 @@ public abstract class UnitStateAttack : UnitState
 
     public override void Constuctor(Unit unit) {
         base.Constuctor(unit);
-
         _targetIsEnemy = _unit.isEnemy == false;
+        _delay = unit.parameters.damageDelay;
     }
 
     public override void Init() {
@@ -29,18 +29,22 @@ public abstract class UnitStateAttack : UnitState
     }
 
     public override void Run() {
-        _time += Time.deltaTime;
-        if (_time < _delay) return;
-        _time -= _delay;
-
         if (_target == false) {
             _unit.SetState(UnitStateType.Default);
             return;
         }
 
+        _time += Time.deltaTime;
+        if (_time < _delay) return;
+        _time -= _delay;
+
         float distanceToTarget = Vector3.Distance(_target.transform.position, _unit.transform.position);
         if (distanceToTarget > _stopAttackDistance) _unit.SetState(UnitStateType.Chase);
 
+        Attack();
+    }
+
+    protected virtual void Attack() {
         _target.ApplyDamage(_damage);
     }
 

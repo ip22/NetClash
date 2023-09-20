@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Health : MonoBehaviour
 {
@@ -20,7 +22,17 @@ public class Health : MonoBehaviour
 
         Debug.Log($"Object {name}: last - {_current + value}, new {_current}");
     }
+
+    public void ApplyDelayDamage(float delay, float damage) {
+        StartCoroutine(DelayDamage(delay, damage));
+    }
+
+    private IEnumerator DelayDamage(float delay, float damage) {
+        yield return new WaitForSeconds(delay);
+        ApplyDamage(damage);
+    }
 }
+
 
 public interface IHealth
 {
