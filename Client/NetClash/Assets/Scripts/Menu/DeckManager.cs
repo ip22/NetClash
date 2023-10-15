@@ -12,9 +12,20 @@ public class DeckManager : MonoBehaviour
     public IReadOnlyList<Card> AvailableCards { get { return _availableCards; } }
     public IReadOnlyList<Card> SelectedCards { get { return _selectedCards; } }
 
-    public event Action<IReadOnlyList<Card>> UpdateAvailable;
+    public event Action<IReadOnlyList<Card>, IReadOnlyList<Card>> UpdateAvailable;
     public event Action<IReadOnlyList<Card>> UpdateSelected;
+    //
 
+    #region Editor
+#if UNITY_EDITOR
+    [SerializeField] private AvailableDeckUI _availableDeckUI;
+
+    // срабатывает, когда меняется кодc
+    private void OnValidate() {
+        _availableDeckUI.SetAllCardsCount(_cards);
+    }
+#endif
+    #endregion
 
     public void Init(List<int> availableCardsIndexes, int[] selectedCardsIndexes) {
         for (int i = 0; i < availableCardsIndexes.Count; i++) {
@@ -25,21 +36,22 @@ public class DeckManager : MonoBehaviour
             _selectedCards.Add(_cards[selectedCardsIndexes[i]]);
         }
 
-        UpdateAvailable?.Invoke(AvailableCards);
+        UpdateAvailable?.Invoke(AvailableCards, SelectedCards);
         UpdateSelected?.Invoke(SelectedCards);
 
-        UpdateAvailable += Test;
+        //UpdateAvailable += Test;
     }
 
-    private void Test(IReadOnlyList<Card> obj) {
-        
+    /*private void Test(IReadOnlyList<Card> obj) {
+
         throw new NotImplementedException();
-    }
+    }*/
 }
 
 [System.Serializable] // чтобы класс отображался в инспекторе
 public class Card
 {
     [field: SerializeField] public string name { get; private set; }
+    [field: SerializeField] public int id { get; private set; }
     [field: SerializeField] public Sprite sprite { get; private set; }
 }

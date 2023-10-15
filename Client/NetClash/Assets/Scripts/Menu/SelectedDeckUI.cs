@@ -19,6 +19,7 @@ public class SelectedDeckUI : MonoBehaviour
         }
     }
     private void OnMouseOver() {
-        // card info
+        // card info in infopanel
+        // 
     }
 }
