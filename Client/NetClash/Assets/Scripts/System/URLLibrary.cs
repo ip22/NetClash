@@ -8,4 +8,5 @@ public class URLLibrary
     //public static string Autorization { get { return MAIN + AUTHORIZATION; } }
 
     public const string GETDECKINFO = "/Game/GedDeckInfo.php";
+    public const string SETSELECTEDCARDS = "/Game/setUserSelectedCards.php";
 }

@@ -13,7 +13,7 @@ public class DeckLoader : MonoBehaviour
 
     private void StartLoad() {
         Network.Instance.Post(URLLibrary.MAIN + URLLibrary.GETDECKINFO,
-        new Dictionary<string, string> { { "userID", /*UserInfo.Instance.ID.ToString()*/"2" } },
+        new Dictionary<string, string> { { "userID", /*UserInfo.Instance.ID.ToString()*/"6" } },
         SuccessLoad, ErrorLoad);
     }
 
@@ -44,10 +44,13 @@ public class DeckData
     public Availablecard[] availableCards;
     public string[] selectedIDs;
 }
+
 [System.Serializable]
 public class Availablecard
 {
     public string name;
     public string id;
+    public int health;
+    public int speed;
 }
 

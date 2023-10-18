@@ -46,7 +46,12 @@ public class DeckManager : MonoBehaviour
 
         throw new NotImplementedException();
     }*/
+
+    public void BackToMainMenu() {
+        UpdateAvailable?.Invoke(AvailableCards, SelectedCards);
+    }
 }
+
 
 [System.Serializable] // чтобы класс отображался в инспекторе
 public class Card
@@ -54,4 +59,6 @@ public class Card
     [field: SerializeField] public string name { get; private set; }
     [field: SerializeField] public int id { get; private set; }
     [field: SerializeField] public Sprite sprite { get; private set; }
+    [field: SerializeField] public int health { get; private set; }
+    [field: SerializeField] public int speed { get; private set; }
 }
