@@ -14,7 +14,7 @@ public class UserInfo : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public int ID { get; private set; }
+    public int ID { get; private set; } = 6;
     public void SetID(int id) {
         ID = id;
     }

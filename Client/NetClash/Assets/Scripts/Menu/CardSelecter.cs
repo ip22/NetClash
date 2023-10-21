@@ -17,6 +17,10 @@ public class CardSelecter : MonoBehaviour
     private int _selectToggleIndex = 0;
 
     private void OnEnable() {
+        FillListFromManager();
+    }
+
+    private void FillListFromManager() {
         _availableCards.Clear();
         for (int i = 0; i < _deckManager.AvailableCards.Count; i++) {
             _availableCards.Add(_deckManager.AvailableCards[i]);
@@ -37,5 +41,23 @@ public class CardSelecter : MonoBehaviour
         _selectedCards[_selectToggleIndex] = _availableCards[cardID-1];
         _selectedDeckUI.UpdateCardsList(SelectedCards);
         _availableDeckUI.UpdateCardsList(AvailableCards, SelectedCards);
+    }
+
+    public void SaveChanges() {
+        _deckManager.ChangeDeck(SelectedCards, CloseChangesWindow);
+    }
+
+    public void CancelChanges() {
+        FillListFromManager();
+        _selectedDeckUI.UpdateCardsList(SelectedCards);
+        _availableDeckUI.UpdateCardsList(AvailableCards, SelectedCards);
+        CloseChangesWindow();
+    }
+
+    [SerializeField] private GameObject _mainCanvas;
+    [SerializeField] private GameObject _selectCanvas;
+    public void CloseChangesWindow() {
+        _mainCanvas.SetActive(true);
+        _selectCanvas.SetActive(false);
     }
 }
