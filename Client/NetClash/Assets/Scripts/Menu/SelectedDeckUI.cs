@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class SelectedDeckUI : MonoBehaviour
 {
-    [SerializeField] private DeckManager _deckManager;
+    //[SerializeField] private DeckManager _deckManager;
     [SerializeField] private Image[] _images;
 
     public void UpdateCardsList(IReadOnlyList<Card> cards) {
